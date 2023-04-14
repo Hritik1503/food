@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" id="create-food-link">Create Food</a></li>
+      <li><a href="#" id="view-food-link">View Food</a></li>
+    </ul>
+  </nav>
+
+  <div id="create-food-page">
+    <div class="form-container">
+      <h2>Create Food</h2>
+      <form id="food-form">
+        <div class="form-field">
+          <label for="food-name">Food Name:</label>
+          <input type="text" id="food-name" name="foodName" required>
+        </div>
+        <div class="form-field">
+          <label for="food-type">Food Type:</label>
+          <select id="food-type" name="foodType" required>
+            <option value="" disabled selected>Select a Food Type</option>
+            <option value="Delicious Food">Delicious Food</option>
+            <option value="Nutritious Food">Nutritious Food</option>
+            <option value="Fast Food">Fast Food</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Desserts">Desserts</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="delivery-time">Max Delivery Time (in minutes):</label>
+          <input type="number" id="delivery-time" name="maxDeliveryTime" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="view-food-page" style="display: none;">
+    <div class="filters-container">
+      <h2>Filters</h2>
+      <div class="form-field">
+        <label for="food-type-filter">Food Type:</label>
+        <select id="food-type-filter" name="foodType">
+          <option value="" selected>All</option>
+          <option value="Delicious Food">Delicious Food</option>
+          <option value="Nutritious Food">Nutritious Food</option>
+          <option value="Fast Food">Fast Food</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Desserts">Desserts</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="delivery-time-filter">Max Delivery Time (in minutes):</label>
+        <input type="number" id="delivery-time-filter" name="maxDeliveryTime">
+      </div>
+    </div>
+    <div class="food-items-container">
+      <h2>Food Items</h2>
+      <ul id="food-items-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
